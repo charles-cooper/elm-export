@@ -43,6 +43,7 @@ import Elm
 spec :: Spec
 spec =
   moduleSpec ["Db", "Types"] $ do
+    require "Date exposing (Date)"
     renderType (Proxy :: Proxy Person)
     renderDecoder (Proxy :: Proxy Person)
     renderEncoder (Proxy :: Proxy Person)
